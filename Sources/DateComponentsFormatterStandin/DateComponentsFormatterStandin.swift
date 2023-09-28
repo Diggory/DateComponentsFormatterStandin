@@ -1,13 +1,13 @@
 import Foundation
 
 ///	Linux doesn't have Foundation's DateComponentsFormatter, so this is a very hacky, poorly coded standin.  Not to be used by anyone...
-class DateComponentsFormatterStandin {
+public class DateComponentsFormatterStandin {
 	let secsPerMinute = 60.0
 	let minutesPerHour = 60.0
 	let hoursPerDay = 24.0
 
 	///	Give a duration string from a TimeInterval
-	func string(from duration: TimeInterval) -> String {
+	public func string(from duration: TimeInterval) -> String {
 		///	The string that we will build-up to describe the duration in English
 		var durationString = ""
 		///	The duration.  We will whittle this down by smaller and smaller units of time as the string is built-up.
