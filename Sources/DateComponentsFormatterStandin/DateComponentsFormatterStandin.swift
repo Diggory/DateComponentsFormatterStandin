@@ -8,9 +8,12 @@ class DateComponentsFormatterStandin {
 
 	///	Give a duration string from a TimeInterval
 	func string(from duration: TimeInterval) -> String {
+		///	The string that we will build-up to describe the duration in English
 		var durationString = ""
+		///	The duration.  We will whittle this down by smaller and smaller units of time as the string is built-up.
 		var workingDuration = duration
 		
+		///	Checks if we have at least one unit of this type in the duration.  If so, count them and remove them from the working duration.
 		func processUnits(singleName: String, unitDuration: Double) {
 			let units = workingDuration / unitDuration
 			let unitsAsInt = Int(floor(units))
