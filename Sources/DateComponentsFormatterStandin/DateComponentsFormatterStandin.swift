@@ -2,6 +2,9 @@ import Foundation
 
 ///	Linux doesn't have Foundation's DateComponentsFormatter, so this is a very hacky, poorly coded standin.  Not to be used by anyone...
 public class DateComponentsFormatterStandin {
+	public init() {
+	}
+	
 	let secsPerMinute = 60.0
 	let minutesPerHour = 60.0
 	let hoursPerDay = 24.0
