@@ -14,7 +14,7 @@ public class DateComponentsFormatterStandin {
 		///	The string that we will build-up to describe the duration in English
 		var durationString = ""
 		///	The duration.  We will whittle this down by smaller and smaller units of time as the string is built-up.
-		var workingDuration = duration
+		var workingDuration = abs(duration)
 		
 		///	Checks if we have at least one unit of this type in the duration.  If so, count them and remove them from the working duration.
 		func processUnits(singleName: String, unitDuration: Double) {
@@ -52,8 +52,9 @@ public class DateComponentsFormatterStandin {
 		
 		//	Seconds
 		processUnits(singleName: "second", unitDuration: 1.0)
-				
-		return durationString
+
+        let sign: String = duration < 0 ? "-" : ""
+		return (sign + durationString)
 	}
 	
 }
