@@ -17,7 +17,7 @@ let package = Package(
         .target(
             name: "DateComponentsFormatterStandin"),
         .testTarget(
-            name: "DateComponentsFormatterStandinTests",
+            name: "DateComponentsFormatterStandinTestsSwiftTesting",
             dependencies: ["DateComponentsFormatterStandin"]),
     ]
 )
